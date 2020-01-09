@@ -2,7 +2,7 @@
   <packages>
     <package name="GIBS.GiftCertificate" type="Module" version="1.0.26">
       <friendlyName>GIBS - Gift Certificate</friendlyName>
-      <description>GIBS - Gift Certificate</description>
+      <description>GIBS - Gift Certificate for DNN</description>
       <iconFile>/Images/icon_extensions_32px.png</iconFile>
       <owner>
         <name>Joseph Aucoin</name>
