@@ -33,8 +33,8 @@ namespace GIBS.Modules.GiftCertificate.Components
 
             // GiftCert2 Sandbox
             // testseller@gibs.com
-                       ClientId = "ARC41bro9AnoH-moonJg0qx5dEuFOZ63qZGD412ovZSr7d6r1LqDRQF3OhZYCUZ9U_rtrH3J_ugRbthA";
-                       ClientSecret = "EMsQqNlnsBfLmlGAyPtIuawc4ILFt1nI-WaOmPKMoA-APqx2svqaAzXfxZNUev8cXs4D_PhqXTsIyXsU";
+            ClientId = "[YOUR ClientId]";
+            ClientSecret = "[ClientSecret ]";
 
             // TEST BUYER
             // buyer@gibs.com
@@ -42,8 +42,8 @@ namespace GIBS.Modules.GiftCertificate.Components
 
             //// GiftCert2 Live LIVE LIVE SETTINGS LIVE
             //// paypal@gibs.com
- //           ClientId = "AS5BSfXPbjGidv-D6fdDBJCC0jtxXyDQDR3WviZI9MilrX_Ot7-JBPSFOTZEtlAWszgU30CccFQcU9vX";
- //           ClientSecret = "EG1VEoNy3DPl30NADia7Nmx7B7LWVEeLQfAURUIUTkW2VSWwB4pMPbtvGPAbJ7muGQVz0JA4IgspylMv";
+            //           ClientId = "[YOUR ClientId]";
+            //           ClientSecret = "[ClientSecret ]";
             var config = GetConfig();
         }
         // Create the configuration map that contains mode and other optional configuration details.
