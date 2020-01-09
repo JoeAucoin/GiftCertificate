@@ -1,0 +1,61 @@
+﻿
+
+/****** Object:  StoredProcedure [dbo].[GIBS_GiftCertGetGiftCerts]    Script Date: 12/14/2017 1:20:20 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[GIBS_GiftCertGetGiftCerts]') AND type in (N'P', N'PC'))
+BEGIN
+EXEC dbo.sp_executesql @statement = N'CREATE PROCEDURE [dbo].[GIBS_GiftCertGetGiftCerts] AS' 
+END
+GO
+
+/** Create Stored Procedures **/
+
+
+ALTER procedure [dbo].[GIBS_GiftCertGetGiftCerts]
+
+	@ModuleId int,
+	@StartDate Date,
+	@EndDate Date
+
+as
+
+select [ModuleID]
+      ,[ItemID]
+      ,[CertAmount]
+      ,[MailTo]
+      ,[ToName]
+      ,[MailToAddress]
+      ,[MailToAddress1]
+      ,[MailToCity]
+      ,[MailToState]
+      ,[MailToZip]
+      ,[FromUserID]
+      ,[FromName]
+      ,[FromPhone]
+      ,[FromEmail]
+      ,[Notes]
+      ,GIBS_GiftCertificate.CreatedByUserID
+      ,[UpdatedByUserID]
+      ,[CreatedDate]
+      ,[isProcessed],
+       'CreatedByUserName' = Users.FirstName + ' ' + Users.LastName
+	         ,[PP_PaymentId]
+      ,[PP_Response]
+
+      ,[PaypalPaymentState]
+	   
+from dbo.GIBS_GiftCertificate
+left outer join  Users on GIBS_GiftCertificate.CreatedByUserID = Users.UserId 
+where  ModuleId = @ModuleId 
+AND
+[CreatedDate] BETWEEN @StartDate and @EndDate
+
+order by GIBS_GiftCertificate.CreatedDate desc
+GO
+
+

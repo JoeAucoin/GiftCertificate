@@ -1,0 +1,401 @@
+﻿
+/****** Object:  Table [dbo].[GIBS_GiftCertificate]    Script Date: 8/7/2015 7:44:31 AM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[GIBS_GiftCertificate](
+	[ModuleID] [int] NOT NULL,
+	[ItemID] [int] IDENTITY(1,1) NOT NULL,
+	[CertAmount] [money] NULL,
+	[MailTo] [varchar](50) NULL,
+	[ToName] [varchar](50) NULL,
+	[MailToAddress] [varchar](50) NULL,
+	[MailToAddress1] [varchar](50) NULL,
+	[MailToCity] [varchar](50) NULL,
+	[MailToState] [varchar](2) NULL,
+	[MailToZip] [varchar](11) NULL,
+	[FromUserID] [int] NOT NULL,
+	[FromName] [varchar](50) NULL,
+	[FromPhone] [varchar](50) NULL,
+	[FromEmail] [varchar](50) NULL,
+	[Notes] [nvarchar](max) NULL,
+	[CreatedByUserID] [int] NOT NULL,
+	[UpdatedByUserID] [int] NOT NULL,
+	[CreatedDate] [datetime] NOT NULL,
+	[isProcessed] [bit] NULL CONSTRAINT [DF_GIBS_GiftCertificate_isProcessed]  DEFAULT ((0)),
+	[PP_PaymentId] [varchar](50) NULL,
+	[PP_Response] [ntext] NULL,
+	[UpdateDate] [datetime] NULL,
+	[PaypalPaymentState] [varchar](20) NULL,
+ CONSTRAINT [PK_GIBS_GiftCertificate] PRIMARY KEY CLUSTERED 
+(
+	[ItemID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+ALTER TABLE [dbo].[GIBS_GiftCertificate]  WITH NOCHECK ADD  CONSTRAINT [FK_GIBS_GiftCertificate_Modules] FOREIGN KEY([ModuleID])
+REFERENCES [dbo].[Modules] ([ModuleID])
+ON DELETE CASCADE
+NOT FOR REPLICATION 
+GO
+
+ALTER TABLE [dbo].[GIBS_GiftCertificate] CHECK CONSTRAINT [FK_GIBS_GiftCertificate_Modules]
+GO
+
+
+/****** Object:  StoredProcedure [dbo].[GIBS_GiftCertAddGiftCert]    Script Date: 08/07/2015 07:48:11 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[GIBS_GiftCertAddGiftCert]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[GIBS_GiftCertAddGiftCert]
+GO
+
+/****** Object:  StoredProcedure [dbo].[GIBS_GiftCertDeleteGiftCert]    Script Date: 08/07/2015 07:48:11 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[GIBS_GiftCertDeleteGiftCert]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[GIBS_GiftCertDeleteGiftCert]
+GO
+
+/****** Object:  StoredProcedure [dbo].[GIBS_GiftCertGetGiftCert]    Script Date: 08/07/2015 07:48:11 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[GIBS_GiftCertGetGiftCert]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[GIBS_GiftCertGetGiftCert]
+GO
+
+/****** Object:  StoredProcedure [dbo].[GIBS_GiftCertGetGiftCerts]    Script Date: 08/07/2015 07:48:11 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[GIBS_GiftCertGetGiftCerts]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[GIBS_GiftCertGetGiftCerts]
+GO
+
+/****** Object:  StoredProcedure [dbo].[GIBS_GiftCertUpdateGiftCert]    Script Date: 08/07/2015 07:48:11 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[GIBS_GiftCertUpdateGiftCert]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[GIBS_GiftCertUpdateGiftCert]
+GO
+
+/****** Object:  StoredProcedure [dbo].[GIBS_GiftCertUpdateWithPayPalReponse]    Script Date: 08/07/2015 07:48:11 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[GIBS_GiftCertUpdateWithPayPalReponse]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[GIBS_GiftCertUpdateWithPayPalReponse]
+GO
+
+
+
+/****** Object:  StoredProcedure [dbo].[GIBS_GiftCertAddGiftCert]    Script Date: 08/07/2015 07:48:11 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE procedure [dbo].[GIBS_GiftCertAddGiftCert]
+
+	@ModuleId       int,
+	@CertAmount money,
+	@MailTo [varchar](50),
+	@ToName [varchar](50),
+	@ToAddress [varchar](50),
+	@ToAddress1 [varchar](50),
+	@ToCity [varchar](50),
+	@ToState [varchar](2),
+	@ToZip [varchar](11),
+	@FromName [varchar](50),
+	@FromUserID       int,
+	@FromPhone [varchar](50),
+	@FromEmail [varchar](50),
+	@Notes        ntext,
+	@CreatedByUserID         int
+
+as
+
+BEGIN 
+	SET NOCOUNT ON;
+
+INSERT INTO GIBS_GiftCertificate
+           ([ModuleID]
+           ,[CertAmount]
+           ,[MailTo]
+           ,[ToName]
+           ,[MailToAddress]
+           ,[MailToAddress1]
+           ,[MailToCity]
+           ,[MailToState]
+           ,[MailToZip]
+           ,[FromUserID]
+           ,[FromName]
+           ,[FromPhone]
+           ,[FromEmail]
+           ,[Notes]
+           ,[CreatedByUserID]
+           ,[UpdatedByUserID]
+           ,[CreatedDate]
+		   )
+ 
+values (
+	@ModuleId,
+	@CertAmount,
+	@MailTo,
+	@ToName,
+	@ToAddress,
+	@ToAddress1,
+	@ToCity,
+	@ToState,
+	@ToZip,
+	@FromUserID,
+	@FromName,
+
+	@FromPhone,
+	@FromEmail,
+
+	@Notes,
+	@CreatedByUserID,
+	@CreatedByUserID,
+	getdate()
+)
+
+select SCOPE_IDENTITY() 
+
+end
+GO
+
+/****** Object:  StoredProcedure [dbo].[GIBS_GiftCertDeleteGiftCert]    Script Date: 08/07/2015 07:48:11 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+create procedure [dbo].[GIBS_GiftCertDeleteGiftCert]
+
+	@ModuleId       int,
+        @ItemId         int
+
+as
+
+delete
+from   GIBS_GiftCertificate
+where  ModuleId = @ModuleId
+and    ItemId = @ItemId
+
+GO
+
+/****** Object:  StoredProcedure [dbo].[GIBS_GiftCertGetGiftCert]    Script Date: 08/07/2015 07:48:11 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE procedure [dbo].[GIBS_GiftCertGetGiftCert]
+
+	
+        @ItemId int
+
+as
+
+select [ItemID]
+      ,[CertAmount]
+      ,[MailTo]
+      ,[ToName]
+      ,[MailToAddress]
+      ,[MailToAddress1]
+      ,[MailToCity]
+      ,[MailToState]
+      ,[MailToZip]
+      ,[FromUserID]
+      ,[FromName]
+      ,[FromPhone]
+      ,[FromEmail]
+      ,[Notes]
+      ,[GIBS_GiftCertificate].[CreatedByUserID]
+      ,[UpdatedByUserID]
+      ,[CreatedDate]
+      ,[isProcessed]
+      ,[PP_PaymentId]
+      ,[PP_Response]
+      ,[UpdateDate]
+	  ,PaypalPaymentState
+	  ,  'CreatedByUserName' = Users.FirstName + ' ' + Users.LastName
+
+from [GIBS_GiftCertificate]
+left outer join  Users on [GIBS_GiftCertificate].CreatedByUserID = Users.UserId
+where  ItemId = @ItemId
+GO
+
+/****** Object:  StoredProcedure [dbo].[GIBS_GiftCertGetGiftCerts]    Script Date: 08/07/2015 07:48:11 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+/** Create Stored Procedures **/
+
+
+CREATE procedure [dbo].[GIBS_GiftCertGetGiftCerts]
+
+	@ModuleId int
+
+as
+
+select [ModuleID]
+      ,[ItemID]
+      ,[CertAmount]
+      ,[MailTo]
+      ,[ToName]
+      ,[MailToAddress]
+      ,[MailToAddress1]
+      ,[MailToCity]
+      ,[MailToState]
+      ,[MailToZip]
+      ,[FromUserID]
+      ,[FromName]
+      ,[FromPhone]
+      ,[FromEmail]
+      ,[Notes]
+      ,GIBS_GiftCertificate.CreatedByUserID
+      ,[UpdatedByUserID]
+      ,[CreatedDate]
+      ,[isProcessed],
+       'CreatedByUserName' = Users.FirstName + ' ' + Users.LastName
+	         ,[PP_PaymentId]
+      ,[PP_Response]
+
+      ,[PaypalPaymentState]
+	   
+from dbo.GIBS_GiftCertificate
+left outer join  Users on GIBS_GiftCertificate.CreatedByUserID = Users.UserId 
+where  ModuleId = @ModuleId 
+order by GIBS_GiftCertificate.CreatedDate desc
+
+GO
+
+/****** Object:  StoredProcedure [dbo].[GIBS_GiftCertUpdateGiftCert]    Script Date: 08/07/2015 07:48:11 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+
+
+
+-- PP_PaymentId, PP_Response, UpdateDate, PaypalPaymentState
+
+
+
+CREATE procedure [dbo].[GIBS_GiftCertUpdateGiftCert]
+(  
+    @ModuleID	int,
+    @ItemID int,
+   	@CertAmount money,
+	@MailTo [varchar](50),
+	@ToName [varchar](50),
+	@ToAddress [varchar](50),
+	@ToAddress1 [varchar](50),
+	@ToCity [varchar](50),
+	@ToState [varchar](2),
+	@ToZip [varchar](11),
+
+	@FromName [varchar](50),
+	@FromPhone [varchar](50),
+	@FromEmail [varchar](50),
+	
+	@Notes        [nvarchar](max),
+	@UpdatedByUserID	int,
+	@IsProcessed	bit
+      
+)
+as
+
+BEGIN 
+      SET NOCOUNT ON;
+
+	  DECLARE @NewLineChar AS CHAR(2) = CHAR(13) + CHAR(10)
+
+	  UPDATE [dbo].[GIBS_GiftCertificate]
+   SET 
+   [CertAmount] = @CertAmount
+      ,[MailTo] = @MailTo
+      ,[ToName] = @ToName
+      ,[MailToAddress] = @ToAddress
+      ,[MailToAddress1] = @ToAddress1
+      ,[MailToCity] = @ToCity
+      ,[MailToState] = @ToState
+      ,[MailToZip] = @ToZip
+     
+      ,[FromName] = @FromName
+      ,[FromPhone] = @FromPhone
+      ,[FromEmail] = @FromEmail
+      ,[Notes] = @Notes
+
+      ,[isProcessed] = @IsProcessed
+      
+      ,[UpdateDate] = GetDate()
+	  ,UpdatedByUserID = @UpdatedByUserID
+
+      where itemid=@ItemID AND ModuleID = @ModuleID
+end
+
+
+
+GO
+
+/****** Object:  StoredProcedure [dbo].[GIBS_GiftCertUpdateWithPayPalReponse]    Script Date: 08/07/2015 07:48:11 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+
+-- PP_PaymentId, PP_Response, UpdateDate, PaypalPaymentState
+
+
+
+CREATE procedure [dbo].[GIBS_GiftCertUpdateWithPayPalReponse]
+(     @ItemID int,
+      @paypalpaymentstate varchar(20),
+      @mailToAddress [varchar](50),
+      @mailToAddress1 [varchar](50),
+      @mailToCity [varchar](50),
+      @mailToState [varchar](2),
+      @mailToZip [varchar](11),
+      @Notes        nvarchar(max),
+	  @PP_PaymentId	[varchar](50),
+	  @PP_Response        ntext
+      
+)
+as
+
+BEGIN 
+      SET NOCOUNT ON;
+
+	  DECLARE @NewLineChar AS CHAR(2) = CHAR(13) + CHAR(10)
+
+      update  GIBS_GiftCertificate set
+            [MailToAddress]         = @MailToAddress
+            ,[MailToAddress1] = @MailToAddress1
+            ,[MailToCity]           = @MailToCity
+            ,[MailToState]          =@MailToState
+            ,[MailToZip]            =@MailToZip
+            ,[Notes]                = [Notes] + @NewLineChar + @Notes
+            ,paypalpaymentstate= @paypalpaymentstate
+			,PP_PaymentId = @PP_PaymentId
+			,PP_Response = @PP_Response
+			,UpdateDate = GetDate()
+      where itemid=@ItemID
+end
+
+GO
+
+

@@ -1,0 +1,57 @@
+﻿
+
+/****** Object:  StoredProcedure [dbo].[GIBS_GiftCertUpdateShipAddress]    Script Date: 12/10/2015 05:42:05 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[GIBS_GiftCertUpdateShipAddress]') AND type in (N'P', N'PC'))
+DROP PROCEDURE [dbo].[GIBS_GiftCertUpdateShipAddress]
+GO
+
+
+
+/****** Object:  StoredProcedure [dbo].[GIBS_GiftCertUpdateShipAddress]    Script Date: 12/10/2015 05:42:05 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+-- PP_PaymentId, PP_Response, UpdateDate, PaypalPaymentState
+
+
+
+CREATE procedure [dbo].[GIBS_GiftCertUpdateShipAddress]
+(  
+    @ModuleID	int,
+    @ItemID int,
+   	
+	@MailTo [varchar](50),
+	
+	@ToAddress [varchar](50),
+	@ToAddress1 [varchar](50),
+	@ToCity [varchar](50),
+	@ToState [varchar](2),
+	@ToZip [varchar](11)
+      
+)
+as
+
+BEGIN 
+      SET NOCOUNT ON;
+
+
+	  UPDATE [dbo].[GIBS_GiftCertificate]
+   SET 
+	   [MailTo] = @MailTo
+      ,[MailToAddress] = @ToAddress
+      ,[MailToAddress1] = @ToAddress1
+      ,[MailToCity] = @ToCity
+      ,[MailToState] = @ToState
+      ,[MailToZip] = @ToZip
+     
+      
+      ,[UpdateDate] = GetDate()
+
+      where itemid=@ItemID AND ModuleID = @ModuleID
+end
+GO
+
+

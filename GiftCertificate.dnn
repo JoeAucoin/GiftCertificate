@@ -1,0 +1,175 @@
+﻿<dotnetnuke type="Package" version="5.0"> 
+  <packages>
+    <package name="GIBS.GiftCertificate" type="Module" version="1.0.26">
+      <friendlyName>GIBS - Gift Certificate</friendlyName>
+      <description>GIBS - Gift Certificate</description>
+      <iconFile>/Images/icon_extensions_32px.png</iconFile>
+      <owner>
+        <name>Joseph Aucoin</name>
+        <organization>Global Internet Business Solutions</organization>
+        <url>www.gibs.com</url>
+        <email>webmaster@gibs.net</email>
+      </owner>
+      <license>Global Internet Business Solutions (GIBS) Custom DNN Modules</license>
+      <releaseNotes>This package has no Release Notes</releaseNotes>
+      <azureCompatible>true</azureCompatible>
+      <dependencies>
+        <dependency type="CoreVersion">07.00.02</dependency>
+      </dependencies>
+      <components>
+        <component type="Script">
+          <scripts>
+            <basePath>DesktopModules\GIBS\GiftCertificate</basePath>
+            <script type="Install">
+              <name>01.00.00.SqlDataProvider</name>
+              <version>01.00.00</version>
+            </script>
+            <script type="Install">
+              <name>01.00.06.SqlDataProvider</name>
+              <version>01.00.06</version>
+            </script>
+            <script type="Install">
+              <name>01.00.16.SqlDataProvider</name>
+              <version>01.00.16</version>
+            </script>
+            <script type="Install">
+              <name>01.00.19.SqlDataProvider</name>
+              <version>01.00.19</version>
+            </script>
+            <script type="UnInstall">
+              <name>Uninstall.SqlDataProvider</name>
+              <version>1.0.26</version>
+            </script>            
+          </scripts>
+        </component>
+        
+        <component type="ResourceFile">
+          <resourceFiles>
+            <basePath>DesktopModules/GIBS/GiftCertificate</basePath>
+            <resourceFile>
+              <name>Resources.zip</name>
+            </resourceFile>
+          </resourceFiles>
+        </component>
+        
+        <component type="Module">
+          <desktopModule>
+            <moduleName>GIBS.GiftCertificate</moduleName>
+            <foldername>GIBS/GiftCertificate</foldername>
+            <businessControllerClass />
+            <supportedFeatures />
+            <moduleDefinitions>
+              <moduleDefinition>
+                <friendlyName>GIBS - Gift Certificate</friendlyName>
+                <definitionName>GIBS - Gift Certificate</definitionName>
+                <defaultCacheTime>0</defaultCacheTime>
+                <moduleControls>
+                  <moduleControl>
+                    <controlKey />
+                    <controlSrc>DesktopModules/GIBS/GiftCertificate/ViewGiftCertificate.ascx</controlSrc>
+                    <supportsPartialRendering>False</supportsPartialRendering>
+                    <controlTitle />
+                    <controlType>View</controlType>
+                    <iconFile />
+                    <helpUrl />
+                    <supportsPopUps>False</supportsPopUps>
+                    <viewOrder>0</viewOrder>
+                  </moduleControl>
+                  <moduleControl>
+                    <controlKey>Edit</controlKey>
+                    <controlSrc>DesktopModules/GIBS/GiftCertificate/EditGiftCert.ascx</controlSrc>
+                    <supportsPartialRendering>False</supportsPartialRendering>
+                    <controlTitle>Edit Gift Certificate</controlTitle>
+                    <controlType>View</controlType>
+                    <iconFile />
+                    <helpUrl />
+                    <supportsPopUps>False</supportsPopUps>
+                    <viewOrder>1</viewOrder>
+                  </moduleControl>
+                  <moduleControl>
+                    <controlKey>List</controlKey>
+                    <controlSrc>DesktopModules/GIBS/GiftCertificate/List.ascx</controlSrc>
+                    <supportsPartialRendering>False</supportsPartialRendering>
+                    <controlTitle>Manage Gift Certificates</controlTitle>
+                    <controlType>View</controlType>
+                    <iconFile />
+                    <helpUrl />
+                    <supportsPopUps>False</supportsPopUps>
+                    <viewOrder>2</viewOrder>
+                  </moduleControl>
+                  <moduleControl>
+                    <controlKey>MakeCertificate</controlKey>
+                    <controlSrc>DesktopModules/GIBS/GiftCertificate/MakeCertificate.ascx</controlSrc>
+                    <supportsPartialRendering>False</supportsPartialRendering>
+                    <controlTitle>Generate Certificate</controlTitle>
+                    <controlType>View</controlType>
+                    <iconFile />
+                    <helpUrl />
+                    <supportsPopUps>False</supportsPopUps>
+                    <viewOrder>2</viewOrder>
+                  </moduleControl>
+                  <moduleControl>
+                    <controlKey>PayPal</controlKey>
+                    <controlSrc>DesktopModules/GIBS/GiftCertificate/MakePayment.ascx</controlSrc>
+                    <supportsPartialRendering>False</supportsPartialRendering>
+                    <controlTitle>Make Payment</controlTitle>
+                    <controlType>View</controlType>
+                    <iconFile />
+                    <helpUrl />
+                    <supportsPopUps>False</supportsPopUps>
+                    <viewOrder>1</viewOrder>
+                  </moduleControl>
+                  <moduleControl>
+                    <controlKey>PayPalParse</controlKey>
+                    <controlSrc>DesktopModules/GIBS/GiftCertificate/PayPalParse.ascx</controlSrc>
+                    <supportsPartialRendering>False</supportsPartialRendering>
+                    <controlTitle>Payment Status</controlTitle>
+                    <controlType>View</controlType>
+                    <iconFile />
+                    <helpUrl />
+                    <supportsPopUps>False</supportsPopUps>
+                    <viewOrder>1</viewOrder>
+                  </moduleControl>
+                  <moduleControl>
+                    <controlKey>Settings</controlKey>
+                    <controlSrc>DesktopModules/GIBS/GiftCertificate/Settings.ascx</controlSrc>
+                    <supportsPartialRendering>False</supportsPartialRendering>
+                    <controlTitle>Module Settings</controlTitle>
+                    <controlType>Edit</controlType>
+                    <iconFile />
+                    <helpUrl />
+                    <supportsPopUps>False</supportsPopUps>
+                    <viewOrder>0</viewOrder>
+                  </moduleControl>
+                </moduleControls>
+              </moduleDefinition>
+            </moduleDefinitions>
+          </desktopModule>
+        </component>
+        <component type="Assembly">
+          <assemblies>
+            <basePath>bin</basePath>
+            <assembly>
+              <name>GIBS.Modules.GiftCertificate.dll</name>
+            </assembly>
+            <assembly>
+              <name>MigraDoc.DocumentObjectModel.dll</name>
+            </assembly>
+            <assembly>
+              <name>MigraDoc.Rendering.dll</name>
+            </assembly>
+            <assembly>
+              <name>MigraDoc.RtfRendering.dll</name>
+            </assembly>
+            <assembly>
+              <name>PayPal.dll</name>
+            </assembly>
+            <assembly>
+              <name>PdfSharp.dll</name>
+            </assembly>
+          </assemblies>
+        </component>
+      </components>
+    </package>
+  </packages>
+</dotnetnuke>
