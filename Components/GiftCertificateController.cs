@@ -9,7 +9,7 @@ using DotNetNuke.Services.Search;
 
 namespace GIBS.Modules.GiftCertificate.Components
 {
-    public class GiftCertificateController : ISearchable, IPortable
+    public class GiftCertificateController : IPortable
     {
         #region public method
         public int GiftCertAddGiftCert(GiftCertificateInfo info)
@@ -191,31 +191,31 @@ namespace GIBS.Modules.GiftCertificate.Components
 
         #endregion
 
-        #region ISearchable Members
+        //#region ISearchable Members
 
-        /// <summary>
-        /// Implements the search interface required to allow DNN to index/search the content of your
-        /// module
-        /// </summary>
-        /// <param name="modInfo"></param>
-        /// <returns></returns>
-        public DotNetNuke.Services.Search.SearchItemInfoCollection GetSearchItems(ModuleInfo modInfo)
-        {
-            SearchItemInfoCollection searchItems = new SearchItemInfoCollection();
+        ///// <summary>
+        ///// Implements the search interface required to allow DNN to index/search the content of your
+        ///// module
+        ///// </summary>
+        ///// <param name="modInfo"></param>
+        ///// <returns></returns>
+        //public DotNetNuke.Services.Search.SearchItemInfoCollection GetSearchItems(ModuleInfo modInfo)
+        //{
+        //    SearchItemInfoCollection searchItems = new SearchItemInfoCollection();
 
-            //List<GiftCertificateInfo> infos = GetGiftCertificates(modInfo.ModuleID);
+        //    //List<GiftCertificateInfo> infos = GetGiftCertificates(modInfo.ModuleID);
 
-            //foreach (GiftCertificateInfo info in infos)
-            //{
-            //    SearchItemInfo searchInfo = new SearchItemInfo(modInfo.ModuleTitle, info.Notes, info.CreatedByUserID, info.CreatedDate,
-            //                                        modInfo.ModuleID, info.ItemId.ToString(), info.Notes, "Item=" + info.ItemId.ToString());
-            //    searchItems.Add(searchInfo);
-            //}
+        //    //foreach (GiftCertificateInfo info in infos)
+        //    //{
+        //    //    SearchItemInfo searchInfo = new SearchItemInfo(modInfo.ModuleTitle, info.Notes, info.CreatedByUserID, info.CreatedDate,
+        //    //                                        modInfo.ModuleID, info.ItemId.ToString(), info.Notes, "Item=" + info.ItemId.ToString());
+        //    //    searchItems.Add(searchInfo);
+        //    //}
 
-            return searchItems;
-        }
+        //    return searchItems;
+        //}
 
-        #endregion
+        //#endregion
 
         #region IPortable Members
 

@@ -1,6 +1,6 @@
 using System;
-using DotNetNuke.Entities.Portals;
-using DotNetNuke.Entities.Users;
+//using DotNetNuke.Entities.Portals;
+//using DotNetNuke.Entities.Users;
 
 namespace GIBS.Modules.GiftCertificate.Components
 {

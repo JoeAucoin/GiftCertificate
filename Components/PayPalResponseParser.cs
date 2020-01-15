@@ -1,28 +1,30 @@
-﻿using System;
+﻿
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Script.Serialization;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-using System.Collections.Specialized;
-using System.Configuration;
-using DotNetNuke.Common.Utilities;
-using DotNetNuke.Entities.Modules;
-using DotNetNuke.Entities.Modules.Actions;
-using DotNetNuke.Services.Exceptions;
-using DotNetNuke.Services.Localization;
-using DotNetNuke.Entities.Users;
-using DotNetNuke.Security.Membership;
-using GIBS.Modules.GiftCertificate;
-using DotNetNuke.Common.Lists;
-using DotNetNuke.Common;
 using PayPal.Api;
-using PayPal;
-using System.Net;
-using System.Text;
-using System.IO;
-using DotNetNuke.Framework.JavaScriptLibraries;
+using System.Web.Script.Serialization;
+//using System.Linq;
+//using System.Web;
+//using System;
+//using System.Web.UI;
+//using System.Web.UI.WebControls;
+//using System.Collections.Specialized;
+//using System.Configuration;
+//using DotNetNuke.Common.Utilities;
+//using DotNetNuke.Entities.Modules;
+//using DotNetNuke.Entities.Modules.Actions;
+//using DotNetNuke.Services.Exceptions;
+//using DotNetNuke.Services.Localization;
+//using DotNetNuke.Entities.Users;
+//using DotNetNuke.Security.Membership;
+//using GIBS.Modules.GiftCertificate;
+//using DotNetNuke.Common.Lists;
+//using DotNetNuke.Common;
+
+//using PayPal;
+//using System.Net;
+//using System.Text;
+//using System.IO;
+//using DotNetNuke.Framework.JavaScriptLibraries;
 
 namespace GIBS.Modules.GiftCertificate.Components
 {

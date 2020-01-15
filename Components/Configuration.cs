@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using PayPal.Api;
-using DotNetNuke.Entities.Modules;
-using DotNetNuke.Services.Localization;
-using DotNetNuke.Common;
+//using DotNetNuke.Entities.Modules;
+//using DotNetNuke.Services.Localization;
+//using DotNetNuke.Common;
 
 
 namespace GIBS.Modules.GiftCertificate.Components
@@ -33,8 +33,9 @@ namespace GIBS.Modules.GiftCertificate.Components
 
             // GiftCert2 Sandbox
             // testseller@gibs.com
-            ClientId = "[YOUR ClientId]";
-            ClientSecret = "[ClientSecret ]";
+            ClientId = "REMOVE_ARC41bro9AnoH-moonJg0qx5dEuFOZ63qZGD412ovZSr7d6r1LqDRQF3OhZYCUZ9U_rtrH3J_ugRbthA";
+            ClientSecret = "REMOVE_EMsQqNlnsBfLmlGAyPtIuawc4ILFt1nI-WaOmPKMoA-APqx2svqaAzXfxZNUev8cXs4D_PhqXTsIyXsU";
+
 
             // TEST BUYER
             // buyer@gibs.com
