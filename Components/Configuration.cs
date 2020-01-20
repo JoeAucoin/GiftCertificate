@@ -33,8 +33,9 @@ namespace GIBS.Modules.GiftCertificate.Components
 
             // GiftCert2 Sandbox
             // testseller@gibs.com
-            ClientId = "REMOVE_ARC41bro9AnoH-moonJg0qx5dEuFOZ63qZGD412ovZSr7d6r1LqDRQF3OhZYCUZ9U_rtrH3J_ugRbthA";
-            ClientSecret = "REMOVE_EMsQqNlnsBfLmlGAyPtIuawc4ILFt1nI-WaOmPKMoA-APqx2svqaAzXfxZNUev8cXs4D_PhqXTsIyXsU";
+
+            //           ClientId = "[YOUR ClientId]";
+            //           ClientSecret = "[ClientSecret ]";
 
 
             // TEST BUYER

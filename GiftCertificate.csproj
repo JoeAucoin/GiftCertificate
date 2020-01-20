@@ -197,44 +197,15 @@
     <Content Include="MakeCertificate.ascx" />
     <Content Include="packages.config" />
     <Content Include="packages\MSBuildTasks.1.5.0.235\build\MSBuildTasks.targets" />
-    <Content Include="packages\MSBuildTasks.1.5.0.235\MSBuildTasks.1.5.0.235.nupkg" />
     <Content Include="packages\MSBuildTasks.1.5.0.235\tools\MSBuild.Community.Tasks.Targets" />
     <Content Include="install\GiftCertificate_1.0.26_Install.zip" />
     <Content Include="install\GiftCertificate_1.0.26_Source.zip" />
     <None Include="packages\MSBuildTasks.1.5.0.235\tools\MSBuild.Community.Tasks.xsd">
       <SubType>Designer</SubType>
     </None>
-    <Content Include="packages\Newtonsoft.Json.10.0.3\.signature.p7s" />
-    <Content Include="packages\Newtonsoft.Json.10.0.3\LICENSE.md" />
-    <Content Include="packages\Newtonsoft.Json.10.0.3\Newtonsoft.Json.10.0.3.nupkg" />
-    <Content Include="packages\Newtonsoft.Json.10.0.3\tools\install.ps1" />
-    <Content Include="packages\PayPal.1.9.1\.signature.p7s" />
-    <Content Include="packages\PayPal.1.9.1\PayPal.1.9.1.nupkg" />
     <None Include="Uninstall.SqlDataProvider" />
     <Content Include="packages\MSBuildTasks.1.5.0.235\tools\MSBuild.Community.Tasks.dll" />
     <Content Include="packages\MSBuildTasks.1.5.0.235\tools\MSBuild.Community.Tasks.xml" />
-    <Content Include="packages\Newtonsoft.Json.10.0.3\lib\net20\Newtonsoft.Json.dll" />
-    <Content Include="packages\Newtonsoft.Json.10.0.3\lib\net20\Newtonsoft.Json.xml" />
-    <Content Include="packages\Newtonsoft.Json.10.0.3\lib\net35\Newtonsoft.Json.dll" />
-    <Content Include="packages\Newtonsoft.Json.10.0.3\lib\net35\Newtonsoft.Json.xml" />
-    <Content Include="packages\Newtonsoft.Json.10.0.3\lib\net40\Newtonsoft.Json.dll" />
-    <Content Include="packages\Newtonsoft.Json.10.0.3\lib\net40\Newtonsoft.Json.xml" />
-    <Content Include="packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll" />
-    <Content Include="packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.xml" />
-    <Content Include="packages\Newtonsoft.Json.10.0.3\lib\netstandard1.0\Newtonsoft.Json.dll" />
-    <Content Include="packages\Newtonsoft.Json.10.0.3\lib\netstandard1.0\Newtonsoft.Json.xml" />
-    <Content Include="packages\Newtonsoft.Json.10.0.3\lib\netstandard1.3\Newtonsoft.Json.dll" />
-    <Content Include="packages\Newtonsoft.Json.10.0.3\lib\netstandard1.3\Newtonsoft.Json.xml" />
-    <Content Include="packages\Newtonsoft.Json.10.0.3\lib\portable-net40+sl5+win8+wp8+wpa81\Newtonsoft.Json.dll" />
-    <Content Include="packages\Newtonsoft.Json.10.0.3\lib\portable-net40+sl5+win8+wp8+wpa81\Newtonsoft.Json.xml" />
-    <Content Include="packages\Newtonsoft.Json.10.0.3\lib\portable-net45+win8+wp8+wpa81\Newtonsoft.Json.dll" />
-    <Content Include="packages\Newtonsoft.Json.10.0.3\lib\portable-net45+win8+wp8+wpa81\Newtonsoft.Json.xml" />
-    <Content Include="packages\PayPal.1.9.1\lib\net40\PayPal.dll" />
-    <Content Include="packages\PayPal.1.9.1\lib\net40\PayPal.xml" />
-    <Content Include="packages\PayPal.1.9.1\lib\net451\PayPal.dll" />
-    <Content Include="packages\PayPal.1.9.1\lib\net451\PayPal.xml" />
-    <Content Include="packages\PayPal.1.9.1\lib\net45\PayPal.dll" />
-    <Content Include="packages\PayPal.1.9.1\lib\net45\PayPal.xml" />
     <Content Include="web.config" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
