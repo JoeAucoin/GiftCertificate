@@ -1,6 +1,6 @@
 ﻿<dotnetnuke type="Package" version="5.0"> 
   <packages>
-    <package name="GIBS.GiftCertificate" type="Module" version="1.0.26">
+    <package name="GIBS.GiftCertificate" type="Module" version="1.0.27">
       <friendlyName>GIBS - Gift Certificate</friendlyName>
       <description>GIBS - Gift Certificate for DNN</description>
       <iconFile>/Images/icon_extensions_32px.png</iconFile>
@@ -38,7 +38,7 @@
             </script>
             <script type="UnInstall">
               <name>Uninstall.SqlDataProvider</name>
-              <version>1.0.26</version>
+              <version>1.0.27</version>
             </script>            
           </scripts>
         </component>
