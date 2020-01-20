@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using PayPal.Api;
+
 //using DotNetNuke.Entities.Modules;
 //using DotNetNuke.Services.Localization;
 //using DotNetNuke.Common;
@@ -58,8 +59,8 @@ namespace GIBS.Modules.GiftCertificate.Components
             // live
             
             Dictionary<string, string> dictionary = new Dictionary<string, string>();
-        //    dictionary.Add("mode", "live");
-            dictionary.Add("mode", "sandbox");
+            dictionary.Add("mode", "live");
+        //    dictionary.Add("mode", "sandbox");
             dictionary.Add("connectionTimeout", "360000");
             dictionary.Add("requestRetries", "1");
             dictionary.Add("ClientId", ClientId);
