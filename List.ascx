@@ -66,7 +66,7 @@
                 OnRowEditing="GridView1_RowEditing" OnRowUpdating="GridView1_RowUpdating" OnRowDataBound="GridView1_RowDataBound"
                 ShowFooter="True" EmptyDataText="No Records" EmptyDataRowStyle-HorizontalAlign="Center"
                 AutoGenerateColumns="False"
-                GridLines="None" CssClass="table table-bordered table-condensed">
+                CssClass="table table-striped table-bordered table-list table-condensed">
 
                 <Columns>
 

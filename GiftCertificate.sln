@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26730.8
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29709.97
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GiftCertificate", "GiftCertificate.csproj", "{7ECFEF80-091F-4505-9B8D-C7242DA53F4C}"
 EndProject
@@ -20,6 +20,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {B8FB83E0-B24B-48AB-895A-3D4F6B07F4E6}
+		SolutionGuid = {B3F36181-12A8-4E3B-BF62-B36027A1077A}
 	EndGlobalSection
 EndGlobal

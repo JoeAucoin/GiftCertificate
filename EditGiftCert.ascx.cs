@@ -244,7 +244,7 @@ namespace GIBS.Modules.GiftCertificate
                 {
                     EmailFrom = PortalSettings.Email.ToString();
                 }
-                //  DotNetNuke.Services.Mail.Mail.SendEmail(EmailFrom.ToString(), txtFromEmail.Text.ToString(), settingsData.EmailSubject, EmailContent.ToString());
+                
                 DotNetNuke.Services.Mail.Mail.SendMail(EmailFrom.ToString(), txtFromEmail.Text.ToString(), "", "Your Gift Certificate Has Been Processed", EmailContent.ToString(), "", "HTML", "", "", "", "");
 
             }
@@ -261,16 +261,15 @@ namespace GIBS.Modules.GiftCertificate
 
             try
             {
-                // Recipient State
-                ListController ctlList = new ListController();
-                ListEntryInfoCollection vStates = ctlList.GetListEntryInfoCollection("Region", "Country.US", this.PortalId);
+                var regions = new ListController().GetListEntryInfoItems("Region", "Country.US", this.PortalId);
+
+                //// Recipient State
                 ddlStatesRecipient.DataTextField = "Value";
                 ddlStatesRecipient.DataValueField = "Value";
-                ddlStatesRecipient.DataSource = vStates;
+                ddlStatesRecipient.DataSource = regions;
                 ddlStatesRecipient.DataBind();
-                ddlStatesRecipient.Items.Insert(0, new ListItem("--", ""));
-
-
+                ddlStatesRecipient.Items.Insert(0, new ListItem("-Select-", "-1"));
+                ddlStatesRecipient.SelectedValue = "MA";
 
             }
             catch (Exception ex)

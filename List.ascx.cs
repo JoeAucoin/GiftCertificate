@@ -1,21 +1,12 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using System.Web;
-using System.Reflection;
-using System.Web.UI;
 using System.Web.UI.WebControls;
 using DotNetNuke.Common;
-using DotNetNuke.Common.Utilities;
 using DotNetNuke.Entities.Modules;
 using DotNetNuke.Entities.Modules.Actions;
 using DotNetNuke.Services.Exceptions;
-using DotNetNuke.Services.Localization;
-using DotNetNuke.UI.Utilities;
 using GIBS.Modules.GiftCertificate.Components;
-using System.Data;
-using DotNetNuke.UI.Skins;
 using System.Text;
 
 namespace GIBS.Modules.GiftCertificate
@@ -42,7 +33,7 @@ namespace GIBS.Modules.GiftCertificate
 
             if (!IsPostBack)
             {
-                txtStartDate.Text = DateTime.Today.AddMonths(-1).ToShortDateString();
+                txtStartDate.Text = DateTime.Today.AddMonths(-3).ToShortDateString();
                 txtEndDate.Text = DateTime.Today.AddDays(1).ToShortDateString();
                 
                 FillGrid();
@@ -96,19 +87,12 @@ namespace GIBS.Modules.GiftCertificate
                     objPagedDataSource.AllowPaging = true;
                 }
 
-  
 
-                
                 //bind the data
                 GridView1.DataSource = objPagedDataSource;
                 GridView1.DataBind();
 
-                ////Calculate Sum and display in Footer Row
-                //decimal total = objPagedDataSource.AsEnumerable().Sum(row => row.Field<decimal>("CertAmount"));
-                //GridView1.FooterRow.Cells[1].Text = "Total";
-                //GridView1.FooterRow.Cells[1].HorizontalAlign = HorizontalAlign.Right;
-                //GridView1.FooterRow.Cells[2].Text = total.ToString("N2");
-
+  
                 if (PageSize == 0 || items.Count <= PageSize)
                 {
                     PagingControl1.Visible = false;
@@ -120,7 +104,7 @@ namespace GIBS.Modules.GiftCertificate
                     PagingControl1.PageSize = PageSize;
                     PagingControl1.CurrentPage = _CurrentPage;
                     PagingControl1.TabID = TabId;
-                    PagingControl1.QuerystringParams = "ctl=List&mid=" + this.ModuleId; // +"&" + GenerateQueryStringParameters(this.Request, "Type", "Low", "High", "LOID", "DOM", "e");
+                    PagingControl1.QuerystringParams = "ctl=List&mid=" + this.ModuleId; 
 
                 }
 
@@ -186,7 +170,6 @@ namespace GIBS.Modules.GiftCertificate
             int itemID = (int)GridView1.DataKeys[e.NewEditIndex].Value;
             Response.Redirect(Globals.NavigateURL(PortalSettings.ActiveTab.TabID, "Edit", "mid=" + ModuleId.ToString() + "&ItemId=" + itemID));
 
-          //  Response.Redirect("EditGiftCert.aspx?ItemID=" + itemID, false);
         }
         
 
@@ -279,6 +262,9 @@ namespace GIBS.Modules.GiftCertificate
 
         }
 
+
+        ////Calculate Sum and display in Footer Row
+        ///
         decimal sumFooterValue = 0;
 
         protected void GridView1_RowDataBound(object sender, GridViewRowEventArgs e)

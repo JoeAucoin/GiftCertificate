@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace GIBS.Modules.GiftCertificate {
-    
-    
-    public partial class List {
-        
+namespace GIBS.Modules.GiftCertificate
+{
+
+
+    public partial class List
+    {
+
         /// <summary>
         /// RadioButtonList1 control.
         /// </summary>
@@ -20,7 +22,7 @@ namespace GIBS.Modules.GiftCertificate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RadioButtonList RadioButtonList1;
-        
+
         /// <summary>
         /// lblStartDate control.
         /// </summary>
@@ -28,8 +30,8 @@ namespace GIBS.Modules.GiftCertificate {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DotNetNuke.UI.UserControls.LabelControl lblStartDate;
-        
+        protected global::System.Web.UI.UserControl lblStartDate;
+
         /// <summary>
         /// txtStartDate control.
         /// </summary>
@@ -38,7 +40,7 @@ namespace GIBS.Modules.GiftCertificate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtStartDate;
-        
+
         /// <summary>
         /// btnUpdateReport control.
         /// </summary>
@@ -47,7 +49,7 @@ namespace GIBS.Modules.GiftCertificate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnUpdateReport;
-        
+
         /// <summary>
         /// lblEndDate control.
         /// </summary>
@@ -55,8 +57,8 @@ namespace GIBS.Modules.GiftCertificate {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DotNetNuke.UI.UserControls.LabelControl lblEndDate;
-        
+        protected global::System.Web.UI.UserControl lblEndDate;
+
         /// <summary>
         /// txtEndDate control.
         /// </summary>
@@ -65,7 +67,7 @@ namespace GIBS.Modules.GiftCertificate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtEndDate;
-        
+
         /// <summary>
         /// GridView1 control.
         /// </summary>
@@ -74,7 +76,7 @@ namespace GIBS.Modules.GiftCertificate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView GridView1;
-        
+
         /// <summary>
         /// PagingControl1 control.
         /// </summary>
