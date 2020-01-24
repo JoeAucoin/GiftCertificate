@@ -132,12 +132,12 @@ namespace GIBS.Modules.GiftCertificate
 
         public void GetRoles()
         {
-            ArrayList myRoles = new ArrayList();
+          
 
             DotNetNuke.Security.Roles.RoleController rc = new DotNetNuke.Security.Roles.RoleController();
 
-            myRoles = rc.GetPortalRoles(this.PortalId);
-         //   myRoles = rc.GetRoles(this.PortalId,);
+            var myRoles = rc.GetRoles(this.PortalId);
+         
 
             ddlRoles.DataSource = myRoles;
             ddlRoles.DataBind();

@@ -120,7 +120,8 @@ namespace GIBS.Modules.GiftCertificate.Components
         /// <returns></returns>
         public GiftCertificateInfo GetGiftCert(int itemId)
         {
-            return (GiftCertificateInfo)CBO.FillObject(DataProvider.Instance().GetGiftCert(itemId), typeof(GiftCertificateInfo));
+          //  return (GiftCertificateInfo)CBO.FillObject(DataProvider.Instance().GetGiftCert(itemId), typeof(GiftCertificateInfo));
+            return CBO.FillObject<GiftCertificateInfo>(DataProvider.Instance().GetGiftCert(itemId));
         }
 
 
