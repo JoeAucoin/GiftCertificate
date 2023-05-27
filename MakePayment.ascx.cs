@@ -226,19 +226,19 @@ namespace GIBS.Modules.GiftCertificate
                             sku = "GiftCertificate"
                          }
                     }
-                        //,
-                        //shipping_address = new ShippingAddress()
-                        //{
-                        //    city = item.MailToCity,
-                        //    country_code = "US",
-                        //    line1 = item.MailToAddress,
-                        //    line2 = item.MailToAddress1,
-                        //    postal_code = item.MailToZip,
-                        //    state = item.MailToState,
-                        //    recipient_name = item.ToName
-                        //}
+                        ,
+                         shipping_address = new ShippingAddress()
+                         {
+                             city = item.MailToCity,
+                             country_code = "US",
+                             line1 = item.MailToAddress,
+                             line2 = item.MailToAddress1,
+                             postal_code = item.MailToZip,
+                             state = item.MailToState,
+                             recipient_name = item.ToName
+                         }
 
-                    };
+                     };
                 }
                 else
                 {

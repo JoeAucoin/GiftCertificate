@@ -133,7 +133,7 @@ input[type=number]
         </div>
 
 
-        <div style="display:none;">
+        <div>
 
 
 		<div class="dnnFormItem">

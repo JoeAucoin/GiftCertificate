@@ -150,10 +150,10 @@ namespace GIBS.Modules.GiftCertificate
             //{
             //    lblFromInstructions.Text = settingsData.FromInstructions;
             //}
-            if (settingsData.SpecialInstructions != null)
-            {
-                lblSpecialInstructions.Text = settingsData.SpecialInstructions;
-            }
+            //if (settingsData.SpecialInstructions != null)
+            //{
+            //    lblSpecialInstructions.Text = settingsData.SpecialInstructions;
+            //}
 
             if (settingsData.ModuleInstructions != null)
             {
@@ -197,18 +197,12 @@ namespace GIBS.Modules.GiftCertificate
             try
             {
                 // MailTo State
-                ListController ctlList = new ListController();
-                ListEntryInfoCollection vStates = ctlList.GetListEntryInfoCollection("Region", "Country.US", this.PortalId);
+                var regions = new ListController().GetListEntryInfoItems("Region", "Country.US", this.PortalId);
                 ddlStatesRecipient.DataTextField = "Value";
                 ddlStatesRecipient.DataValueField = "Value";
-                ddlStatesRecipient.DataSource = vStates;
+                ddlStatesRecipient.DataSource = regions;
                 ddlStatesRecipient.DataBind();
                 ddlStatesRecipient.Items.Insert(0, new ListItem("--", ""));
-
-
-
-
-
 
             }
             catch (Exception ex)

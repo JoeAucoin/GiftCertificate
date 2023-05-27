@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace GIBS.Modules.GiftCertificate {
-    
-    
-    public partial class ViewGiftCertificate {
-        
+namespace GIBS.Modules.GiftCertificate
+{
+
+
+    public partial class ViewGiftCertificate
+    {
+
         /// <summary>
         /// HyperLinkManageCertificates control.
         /// </summary>
@@ -20,7 +22,7 @@ namespace GIBS.Modules.GiftCertificate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HyperLink HyperLinkManageCertificates;
-        
+
         /// <summary>
         /// lblModuleInstructions control.
         /// </summary>
@@ -29,7 +31,7 @@ namespace GIBS.Modules.GiftCertificate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblModuleInstructions;
-        
+
         /// <summary>
         /// lblFormMessage control.
         /// </summary>
@@ -38,7 +40,7 @@ namespace GIBS.Modules.GiftCertificate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblFormMessage;
-        
+
         /// <summary>
         /// lblCertAmount control.
         /// </summary>
@@ -46,8 +48,8 @@ namespace GIBS.Modules.GiftCertificate {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DotNetNuke.UI.UserControls.LabelControl lblCertAmount;
-        
+        protected global::System.Web.UI.UserControl lblCertAmount;
+
         /// <summary>
         /// ddlQuantity control.
         /// </summary>
@@ -56,7 +58,7 @@ namespace GIBS.Modules.GiftCertificate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlQuantity;
-        
+
         /// <summary>
         /// txtCertAmount control.
         /// </summary>
@@ -65,7 +67,7 @@ namespace GIBS.Modules.GiftCertificate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtCertAmount;
-        
+
         /// <summary>
         /// RequiredFieldValidator1 control.
         /// </summary>
@@ -74,7 +76,7 @@ namespace GIBS.Modules.GiftCertificate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
-        
+
         /// <summary>
         /// RegularExpressionValidator1 control.
         /// </summary>
@@ -83,7 +85,7 @@ namespace GIBS.Modules.GiftCertificate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator1;
-        
+
         /// <summary>
         /// lblToName control.
         /// </summary>
@@ -91,8 +93,8 @@ namespace GIBS.Modules.GiftCertificate {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DotNetNuke.UI.UserControls.LabelControl lblToName;
-        
+        protected global::System.Web.UI.UserControl lblToName;
+
         /// <summary>
         /// txtToName control.
         /// </summary>
@@ -101,7 +103,7 @@ namespace GIBS.Modules.GiftCertificate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtToName;
-        
+
         /// <summary>
         /// RequiredFieldToName control.
         /// </summary>
@@ -110,7 +112,7 @@ namespace GIBS.Modules.GiftCertificate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldToName;
-        
+
         /// <summary>
         /// lblFromName control.
         /// </summary>
@@ -118,8 +120,8 @@ namespace GIBS.Modules.GiftCertificate {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DotNetNuke.UI.UserControls.LabelControl lblFromName;
-        
+        protected global::System.Web.UI.UserControl lblFromName;
+
         /// <summary>
         /// txtFromName control.
         /// </summary>
@@ -128,7 +130,7 @@ namespace GIBS.Modules.GiftCertificate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtFromName;
-        
+
         /// <summary>
         /// RequiredFieldFromName control.
         /// </summary>
@@ -137,7 +139,7 @@ namespace GIBS.Modules.GiftCertificate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldFromName;
-        
+
         /// <summary>
         /// lblFromEmail control.
         /// </summary>
@@ -145,8 +147,8 @@ namespace GIBS.Modules.GiftCertificate {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DotNetNuke.UI.UserControls.LabelControl lblFromEmail;
-        
+        protected global::System.Web.UI.UserControl lblFromEmail;
+
         /// <summary>
         /// txtFromEmail control.
         /// </summary>
@@ -155,7 +157,7 @@ namespace GIBS.Modules.GiftCertificate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtFromEmail;
-        
+
         /// <summary>
         /// RequiredFieldValidator2 control.
         /// </summary>
@@ -164,7 +166,7 @@ namespace GIBS.Modules.GiftCertificate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator2;
-        
+
         /// <summary>
         /// RegularExpressionValidator2 control.
         /// </summary>
@@ -173,7 +175,7 @@ namespace GIBS.Modules.GiftCertificate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator2;
-        
+
         /// <summary>
         /// lblFromPhone control.
         /// </summary>
@@ -181,8 +183,8 @@ namespace GIBS.Modules.GiftCertificate {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DotNetNuke.UI.UserControls.LabelControl lblFromPhone;
-        
+        protected global::System.Web.UI.UserControl lblFromPhone;
+
         /// <summary>
         /// txtFromPhone control.
         /// </summary>
@@ -191,7 +193,7 @@ namespace GIBS.Modules.GiftCertificate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtFromPhone;
-        
+
         /// <summary>
         /// RequiredFieldValidator6 control.
         /// </summary>
@@ -200,7 +202,7 @@ namespace GIBS.Modules.GiftCertificate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator6;
-        
+
         /// <summary>
         /// lblMailTo control.
         /// </summary>
@@ -208,8 +210,8 @@ namespace GIBS.Modules.GiftCertificate {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DotNetNuke.UI.UserControls.LabelControl lblMailTo;
-        
+        protected global::System.Web.UI.UserControl lblMailTo;
+
         /// <summary>
         /// rdoRecipient control.
         /// </summary>
@@ -218,7 +220,7 @@ namespace GIBS.Modules.GiftCertificate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RadioButton rdoRecipient;
-        
+
         /// <summary>
         /// rdoPurchaser control.
         /// </summary>
@@ -227,7 +229,7 @@ namespace GIBS.Modules.GiftCertificate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RadioButton rdoPurchaser;
-        
+
         /// <summary>
         /// lblMailToName control.
         /// </summary>
@@ -235,8 +237,8 @@ namespace GIBS.Modules.GiftCertificate {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DotNetNuke.UI.UserControls.LabelControl lblMailToName;
-        
+        protected global::System.Web.UI.UserControl lblMailToName;
+
         /// <summary>
         /// txtMailToName control.
         /// </summary>
@@ -245,7 +247,7 @@ namespace GIBS.Modules.GiftCertificate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtMailToName;
-        
+
         /// <summary>
         /// RequiredFieldValidator4 control.
         /// </summary>
@@ -254,7 +256,7 @@ namespace GIBS.Modules.GiftCertificate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator4;
-        
+
         /// <summary>
         /// lblToAddress control.
         /// </summary>
@@ -262,8 +264,8 @@ namespace GIBS.Modules.GiftCertificate {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DotNetNuke.UI.UserControls.LabelControl lblToAddress;
-        
+        protected global::System.Web.UI.UserControl lblToAddress;
+
         /// <summary>
         /// txtToAddress control.
         /// </summary>
@@ -272,7 +274,7 @@ namespace GIBS.Modules.GiftCertificate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtToAddress;
-        
+
         /// <summary>
         /// RequiredFieldValidator3 control.
         /// </summary>
@@ -281,7 +283,7 @@ namespace GIBS.Modules.GiftCertificate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator3;
-        
+
         /// <summary>
         /// lblToAddress1 control.
         /// </summary>
@@ -289,8 +291,8 @@ namespace GIBS.Modules.GiftCertificate {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DotNetNuke.UI.UserControls.LabelControl lblToAddress1;
-        
+        protected global::System.Web.UI.UserControl lblToAddress1;
+
         /// <summary>
         /// txtToAddress1 control.
         /// </summary>
@@ -299,7 +301,7 @@ namespace GIBS.Modules.GiftCertificate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtToAddress1;
-        
+
         /// <summary>
         /// lblToCityStateZip control.
         /// </summary>
@@ -307,8 +309,8 @@ namespace GIBS.Modules.GiftCertificate {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DotNetNuke.UI.UserControls.LabelControl lblToCityStateZip;
-        
+        protected global::System.Web.UI.UserControl lblToCityStateZip;
+
         /// <summary>
         /// txtToCity control.
         /// </summary>
@@ -317,7 +319,7 @@ namespace GIBS.Modules.GiftCertificate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtToCity;
-        
+
         /// <summary>
         /// ddlStatesRecipient control.
         /// </summary>
@@ -326,7 +328,7 @@ namespace GIBS.Modules.GiftCertificate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlStatesRecipient;
-        
+
         /// <summary>
         /// txtToZip control.
         /// </summary>
@@ -335,7 +337,7 @@ namespace GIBS.Modules.GiftCertificate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtToZip;
-        
+
         /// <summary>
         /// RequiredFieldCity control.
         /// </summary>
@@ -344,7 +346,7 @@ namespace GIBS.Modules.GiftCertificate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldCity;
-        
+
         /// <summary>
         /// RequiredFieldState control.
         /// </summary>
@@ -353,7 +355,7 @@ namespace GIBS.Modules.GiftCertificate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldState;
-        
+
         /// <summary>
         /// RequiredFieldZip control.
         /// </summary>
@@ -362,7 +364,7 @@ namespace GIBS.Modules.GiftCertificate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldZip;
-        
+
         /// <summary>
         /// lblSpecialInstructions control.
         /// </summary>
@@ -370,8 +372,8 @@ namespace GIBS.Modules.GiftCertificate {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DotNetNuke.UI.UserControls.LabelControl lblSpecialInstructions;
-        
+        protected global::System.Web.UI.UserControl lblSpecialInstructions;
+
         /// <summary>
         /// txtNotes control.
         /// </summary>
@@ -380,7 +382,7 @@ namespace GIBS.Modules.GiftCertificate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtNotes;
-        
+
         /// <summary>
         /// txtItemID control.
         /// </summary>
@@ -389,7 +391,7 @@ namespace GIBS.Modules.GiftCertificate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HiddenField txtItemID;
-        
+
         /// <summary>
         /// btnSave control.
         /// </summary>
@@ -398,7 +400,7 @@ namespace GIBS.Modules.GiftCertificate {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.LinkButton btnSave;
-        
+
         /// <summary>
         /// btnCancel control.
         /// </summary>
